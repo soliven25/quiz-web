@@ -17,17 +17,20 @@
         
         <input type="button" id="choicethree" value="ㅇ오른쪽을 본다"/>
         
-        <script type="text/javascript">       
+        <script type="text/javascript"> 
+            var leftScore = 0;
+            var rightScore = 0;      
+            
             var leftChoice = document.getElementById("choiceone");
             leftChoice.onclick = function(){
-                alert("leftChoice");
-                console.log("leftChoice");
+                leftScore++;
+                console.log("leftSchore : " + leftScore);
             }
             
             var rightChoice = document.getElementById("choicetwo");
             rightChoice.onclick = function(){
-                alert("rightChoice");
-                
+                rightScore++;
+                console.log("rightscore : " + rightScore);
             }
             
             var thirdChoice = document.getElementById("choicethree");
