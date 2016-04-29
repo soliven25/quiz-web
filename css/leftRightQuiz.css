@@ -5,7 +5,7 @@ body{
     display: table-cell;
     text-align:center;
     vertical-align: middle;
-    background-color: greenyellow;
+    background-color: white;
 }
 
 button{
@@ -15,4 +15,8 @@ button{
     margin: 0;
     vertical-align: top;
     width: 104px;
+}
+button:hover{
+    heght:140px;
+    color: beige;
 }

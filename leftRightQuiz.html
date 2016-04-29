@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta http-eqiv="Content-Type" content="text/html; charset=UTF-8">
         <title>left right quiz</title>
         <link rel="stylesheet" type="text/css" href="css/leftRightQuiz.css">
-        <script>
-            
-        </script>
     </head>
     
     <body>
@@ -15,5 +14,29 @@
         <button id="choicetwo">
             <img src="image/btn_cancel.png">
         </button>
+        
+        <input type="button" id="choicethree" value="ㅇ오른쪽을 본다"/>
+        
+        <script type="text/javascript">       
+            var leftChoice = document.getElementById("choiceone");
+            leftChoice.onclick = function(){
+                alert("leftChoice");
+                console.log("leftChoice");
+            }
+            
+            var rightChoice = document.getElementById("choicetwo");
+            rightChoice.onclick = function(){
+                alert("rightChoice");
+                
+            }
+            
+            var thirdChoice = document.getElementById("choicethree");
+            thirdChoice.onclick = function(){
+                alert('thirdChoice');
+                console.log("thirdChoice");
+                thirdChoice.value = "왼쪽을 본다";
+                
+            }
+        </script>
     </body>
 </html>
