@@ -1,7 +1,18 @@
+html, body{height:100%;}
+html{display:table; width:100%}
+
 body{
+    display: table-cell;
+    text-align:center;
+    vertical-align: middle;
     background-color: greenyellow;
 }
 
-div{
-    align-content: center;
+button{
+    display: inline-block;
+    height: 134px;
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    width: 104px;
 }
