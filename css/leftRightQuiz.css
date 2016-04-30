@@ -1,8 +1,7 @@
 html, body{height:100%;}
-html{display:table; width:100%}
+html{ width:100%}
 
 body{
-    display: table-cell;
     text-align:center;
     vertical-align: middle;
     background-color: azure;
@@ -14,7 +13,6 @@ body{
 input{
     margin: auto;
     display: inline-block;
-    height: 100%;
     vertical-align: middle;
     width: 25%;
     height: 50%;
