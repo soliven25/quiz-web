@@ -2,8 +2,18 @@ window.onload = function(){
     var leftScore = 0;    /* score for left brain */
     var rightScore = 0;   /* schore for right brain */
     var numberOfChoice = 1;  /* progressed quiz num */
-    var leftArray = ["default","개가 좋아요!","쥐가 좋아요!","소가 좋아요!"];
-    var rightArray = ["default","고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!"];
+    var leftArray = ["default","개가 좋아요!","쥐가 좋아요!","소가 좋아요!","스컹크가 좋아요!",
+                    "코알라가 좋아요!","개가 좋아요!","쥐가 좋아요!","소가 좋아요!","스컹크가 좋아요!",
+                    "코알라가 좋아요!","개가 좋아요!","쥐가 좋아요!","소가 좋아요!","스컹크가 좋아요!",
+                    "코알라가 좋아요!","개가 좋아요!","쥐가 좋아요!","소가 좋아요!","스컹크가 좋아요!",
+                    "끝"];
+    var rightArray = ["default","고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!","낙타가 좋아요!",
+                     "뱀이 좋아요!","고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!","낙타가 좋아요!",
+                     "뱀이 좋아요!","고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!","낙타가 좋아요!",
+                     "뱀이 좋아요!","고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!","낙타가 좋아요!",
+                     "끝"];
+    var leftScoreArray = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    var rightScoreArray = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
             
     var leftChoice = document.getElementById("choiceone"); /* DOM element for left */
     var rightChoice = document.getElementById("choicetwo"); /* DOM element for right */
@@ -20,11 +30,11 @@ window.onload = function(){
     leftChoice.onclick = function(){
         if(numberOfChoice > 20)
             return;
-                  
-        numberOfChoice++;
-        leftScore++;
+                      
+        leftScore += leftScoreArray[numberOfChoice-1];
         rightChoice.value = rightArray[numberOfChoice];              
         leftChoice.value = leftArray[numberOfChoice];
+        numberOfChoice++;
                 
         if(21 === numberOfChoice){
             displayResult();
@@ -37,10 +47,10 @@ window.onload = function(){
         if(numberOfChoice > 20)
             return;
                     
-        numberOfChoice++;
-        rightScore++;
+        rightScore += rightScoreArray[numberOfChoice-1];
         leftChoice.value = leftArray[numberOfChoice];
         rightChoice.value = rightArray[numberOfChoice];
+        numberOfChoice++;
                 
         if(21 === numberOfChoice){
             displayResult();
