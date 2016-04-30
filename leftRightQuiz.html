@@ -13,42 +13,61 @@
             <input type="button" id="choicetwo" value = "조랑말이 좋아요!"/>  
         </div>   
         <div id="explanation">
-            <p id="remainChoice">1</p><p id="totalChoce">/20</p>
+            <p id="remainChoice">1/20</p>
+            <p id="result"></p>
         </div>      
         <script type="text/javascript"> 
             var leftScore = 0;    /* score for left brain */
             var rightScore = 0;   /* schore for right brain */
-            var numberOfChoice = 0;  /* progressed quiz num */
-            var leftArray = ["개가 좋아요!","쥐가 좋아요!","소가 좋아요!"];
-            var rightArray = ["고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!"];
+            var numberOfChoice = 1;  /* progressed quiz num */
+            var leftArray = ["default","개가 좋아요!","쥐가 좋아요!","소가 좋아요!"];
+            var rightArray = ["default","고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!"];
             
             var leftChoice = document.getElementById("choiceone"); /* DOM element for left */
             var rightChoice = document.getElementById("choicetwo"); /* DOM element for right */
             var remainDisplay = document.getElementById("remainChoice");
+            var resultDisplay = document.getElementById("result");
+            
+            function displayResult(){
+                 if(leftScore > rightScore)
+                    resultDisplay.innerHTML = "당신은 좌뇌형이네요~~"; 
+                 else
+                    resultDisplay.innerHTML = "당신은 우뇌형이네요~~";               
+            }
             
             leftChoice.onclick = function(){
+                
+                if(numberOfChoice > 20)
+                    return;
+                    
                 leftScore++;
                 rightChoice.value = rightArray[numberOfChoice];              
                 leftChoice.value = leftArray[numberOfChoice];
+                
+                if(20 === numberOfChoice){
+                    displayResult();
+                }     
+                      
                 numberOfChoice++;
-                remainDisplay.innerHTML = numberOfChoice+1;
+                remainDisplay.innerHTML = numberOfChoice + "/20";
             }
                       
             rightChoice.onclick = function(){
+                if(numberOfChoice > 20)
+                    return;
+                    
                 rightScore++;
                 leftChoice.value = leftArray[numberOfChoice];
                 rightChoice.value = rightArray[numberOfChoice];
-                numberOfChoice++;
-                remainDisplay.innerHTML = numberOfChoice+1;
-            }
-            
-            
-            thirdChoice.onclick = function(){
-                alert('thirdChoice');
-                console.log("thirdChoice");
-                thirdChoice.value = "왼쪽을 본다";
                 
+                if(20 === numberOfChoice){
+                    displayResult();
+                }
+                
+                numberOfChoice++;
+                remainDisplay.innerHTML = numberOfChoice +"/20";                                                          
             }
+            
         </script>
     </body>
 </html>
