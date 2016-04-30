@@ -10,13 +10,12 @@ body{
 
 input{
     display: inline-block;
-    height: 134px;
+    height: 25%;
     padding: 0;
     margin: 0;
     vertical-align: top;
-    width: 104px;
+    width: 25%;
 }
 input:hover{
-    heght:140px;
     color:coral;
 }
