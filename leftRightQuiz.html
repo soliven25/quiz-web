@@ -8,28 +8,38 @@
     </head>
     
     <body>
-        <button id="choiceone">
-            <img src="image/btn_confirm.png">
+        <button id="choiceone" value = "경주마가 좋아요!">
+      
         </button>
-        <button id="choicetwo">
-            <img src="image/btn_cancel.png">
+        <button id="choicetwo" value = "조랑말이 좋아요!">
+        
         </button>
         
         <input type="button" id="choicethree" value="ㅇ오른쪽을 본다"/>
         
         <script type="text/javascript"> 
             var leftScore = 0;
-            var rightScore = 0;      
+            var rightScore = 0; 
+            var numberOfChoice = 0;  
+            var leftArray = ["개가 좋아요!","쥐가 좋아요!","소가 좋아요!"];
+            var rightArray = ["고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!"];
             
             var leftChoice = document.getElementById("choiceone");
+            var rightChoice = document.getElementById("choicetwo");
+            
             leftChoice.onclick = function(){
                 leftScore++;
+                rightChoice.value = rightArray[numberOfChoice];              
+                leftChoice.value = leftArray[numberOfChoice];
+                numberOfChoice++;
                 console.log("leftSchore : " + leftScore);
             }
-            
-            var rightChoice = document.getElementById("choicetwo");
+                      
             rightChoice.onclick = function(){
                 rightScore++;
+                leftChoice.value = leftArray[numberOfChoice];
+                rightChoice.value = rightArray[numberOfChoice];
+                numberOfChoice++;
                 console.log("rightscore : " + rightScore);
             }
             
