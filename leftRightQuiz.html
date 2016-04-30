@@ -8,26 +8,30 @@
     </head>
     
     <body>
-        <input type="button" id="choiceone" value = "경주마가 좋아요!"/>
-        <input type="button" id="choicetwo" value = "조랑말이 좋아요!"/>      
-        <input type="button" id="choicethree" value="오른쪽을 본다"/>
-        
+        <div id="multipleChoice">
+            <input type="button" id="choiceone" value = "경주마가 좋아요!"/>
+            <input type="button" id="choicetwo" value = "조랑말이 좋아요!"/>  
+        </div>   
+        <div id="explanation">
+            <p id="remainChoice">1</p><p id="totalChoce">/20</p>
+        </div>      
         <script type="text/javascript"> 
-            var leftScore = 0;
-            var rightScore = 0; 
-            var numberOfChoice = 0;  
+            var leftScore = 0;    /* score for left brain */
+            var rightScore = 0;   /* schore for right brain */
+            var numberOfChoice = 0;  /* progressed quiz num */
             var leftArray = ["개가 좋아요!","쥐가 좋아요!","소가 좋아요!"];
             var rightArray = ["고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!"];
             
-            var leftChoice = document.getElementById("choiceone");
-            var rightChoice = document.getElementById("choicetwo");
+            var leftChoice = document.getElementById("choiceone"); /* DOM element for left */
+            var rightChoice = document.getElementById("choicetwo"); /* DOM element for right */
+            var remainDisplay = document.getElementById("remainChoice");
             
             leftChoice.onclick = function(){
                 leftScore++;
                 rightChoice.value = rightArray[numberOfChoice];              
                 leftChoice.value = leftArray[numberOfChoice];
                 numberOfChoice++;
-                console.log("leftSchore : " + leftScore);
+                remainDisplay.innerHTML = numberOfChoice+1;
             }
                       
             rightChoice.onclick = function(){
@@ -35,10 +39,10 @@
                 leftChoice.value = leftArray[numberOfChoice];
                 rightChoice.value = rightArray[numberOfChoice];
                 numberOfChoice++;
-                console.log("rightscore : " + rightScore);
+                remainDisplay.innerHTML = numberOfChoice+1;
             }
             
-            var thirdChoice = document.getElementById("choicethree");
+            
             thirdChoice.onclick = function(){
                 alert('thirdChoice');
                 console.log("thirdChoice");

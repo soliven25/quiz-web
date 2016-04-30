@@ -16,7 +16,7 @@ input{
     vertical-align: top;
     width: 104px;
 }
-button:hover{
+input:hover{
     heght:140px;
-    color: beige;
+    color:coral;
 }
