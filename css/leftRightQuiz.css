@@ -5,17 +5,44 @@ body{
     display: table-cell;
     text-align:center;
     vertical-align: middle;
-    background-color: white;
+    background-color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: darkgreen;
 }
 
 input{
+    margin: auto;
     display: inline-block;
-    height: 25%;
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
+    height: 100%;
+    vertical-align: middle;
     width: 25%;
+    height: 50%;
+    border-radius: 4px;
 }
 input:hover{
-    color:coral;
+    color:coral;  
+}
+
+#question{
+    margin: auto;
+    display: inline-block;
+    text-align:center;
+    vertical-align: middle;
+    width: 50%;
+    height: 50%;
+    border-radius: 4px;
+    background-color: lawngreen;
+    border: darkolivegreen;
+}
+
+#questionSentence{
+    position: relative;
+    margin: auto;
+    display: inline-block;
+    text-align:center;
+    vertical-align: middle;
+    padding: 15%;
+    width: 70%;
+    height: 100%;
 }
