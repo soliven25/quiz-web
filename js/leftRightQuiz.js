@@ -34,22 +34,26 @@ window.onload = function(){
                      "뱀이 좋아요!","고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!","낙타가 좋아요!",
                      "뱀이 좋아요!","고양이가 좋아요!", "햄스터가 좋아요!", "양이 좋아요!","낙타가 좋아요!",
                      "끝"];
-    var leftScoreArray = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+                     
+    /* assign the weight for each question */
+    var leftScoreArray = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]; 
     var rightScoreArray = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
             
-    var questionDisplay = document.getElementById("questionSentence");
+    var questionDisplay = document.getElementById("questionSentence");  /* DOM element for question */
     var leftChoice = document.getElementById("choiceone"); /* DOM element for left */
     var rightChoice = document.getElementById("choicetwo"); /* DOM element for right */
-    var remainDisplay = document.getElementById("remainChoice");
-    var resultDisplay = document.getElementById("result");
-            
+    var remainDisplay = document.getElementById("remainChoice"); /* DOM element for remain number of questions */
+    var resultDisplay = document.getElementById("result"); /* DOM element for the final result */
+     
+    /* display the final result */       
     function displayResult(){
         if(leftScore > rightScore)
             resultDisplay.innerHTML = "당신은 좌뇌형이네요~~"; 
         else
             resultDisplay.innerHTML = "당신은 우뇌형이네요~~";               
     }
-            
+          
+    /* the case a user selects left answer */  
     leftChoice.onclick = function(){
         if(numberOfChoice > 20)
             return;
@@ -67,7 +71,8 @@ window.onload = function(){
             remainDisplay.innerHTML = numberOfChoice + "/20";
         }     
     }
-                      
+    
+    /* the case a user selects right answer */                
     rightChoice.onclick = function(){
         if(numberOfChoice > 20)
             return;
