@@ -55,6 +55,8 @@ div{
     height:60px;
     background-color: orange;
     padding-top:30px;
+    transition: width .5s ease;
+    transition: height .5s ease;
 }
 
 #choicetwo{
@@ -68,10 +70,12 @@ div{
 }
 
 #choicetwo:hover{
-    width:310px;
-    height:60px;
+    width: 310px;
+    height: 60px;
     background-color: coral;
     padding-top:30px;
+    transition: width .5s ease;
+    transition: height .5s ease;
 }
 
 #explanation{
