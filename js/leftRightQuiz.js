@@ -1,4 +1,5 @@
 window.onload = function(){
+    var TOTAL_NUM_OF_QUESTION = 20;
     var leftScore = 0;    /* score for left brain */
     var rightScore = 0;   /* schore for right brain */
     var numberOfChoice = 1;  /* progressed quiz num */
@@ -48,14 +49,15 @@ window.onload = function(){
     /* display the final result */       
     function displayResult(){
         if(leftScore > rightScore)
-            resultDisplay.innerHTML = "당신은 좌뇌형이네요~~"; 
+            questionDisplay.innerHTML = "당신은 좌뇌형이네요~~"; 
         else
-            resultDisplay.innerHTML = "당신은 우뇌형이네요~~";               
+            questionDisplay.innerHTML = "당신은 우뇌형이네요~~";               
     }
           
     /* the case a user selects left answer */  
-    leftChoice.onclick = function(){
-        if(numberOfChoice > 20)
+    leftChoice.onclick = function(e){
+        e.preventDefault();
+        if(numberOfChoice > TOTAL_NUM_OF_QUESTION)
             return;
                       
         leftScore += leftScoreArray[numberOfChoice-1];
@@ -65,7 +67,7 @@ window.onload = function(){
         leftChoice.value = leftArray[numberOfChoice];
         numberOfChoice++;
                 
-        if(21 === numberOfChoice){
+        if((TOTAL_NUM_OF_QUESTION + 1) === numberOfChoice){
             displayResult();
         }else{
             remainDisplay.innerHTML = numberOfChoice + "/20";
@@ -74,7 +76,7 @@ window.onload = function(){
     
     /* the case a user selects right answer */                
     rightChoice.onclick = function(){
-        if(numberOfChoice > 20)
+        if(numberOfChoice > TOTAL_NUM_OF_QUESTION)
             return;
                     
         rightScore += rightScoreArray[numberOfChoice-1];
@@ -84,7 +86,7 @@ window.onload = function(){
         rightChoice.value = rightArray[numberOfChoice];
         numberOfChoice++;
                 
-        if(21 === numberOfChoice){
+        if((TOTAL_NUM_OF_QUESTION + 1) === numberOfChoice){
             displayResult();
         }else{
             remainDisplay.innerHTML = numberOfChoice +"/20";   

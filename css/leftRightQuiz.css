@@ -18,6 +18,10 @@ input{
     height: 50%;
     border-radius: 4px;
 }
+
+input:focus{
+    border: 0px;
+}
 input:hover{
     color:coral;  
 }
