@@ -34,6 +34,51 @@ div{
     width: 70%;
 }
 
+#multipleChoice{
+    text-align:center; 
+    vertical-align: middle;
+}
+
+#choiceone{
+    width:300px; 
+    height:50px; 
+    cursor:pointer; 
+    background-color: red; 
+    display:inline-block;
+    text-align:center; 
+    vertical-align: middle;
+    padding-top: 20px;
+}
+
+#choiceone:hover{
+    width:310px;
+    height:60px;
+    background-color: orange;
+    padding-top:30px;
+}
+
+#choicetwo{
+    width:300px; 
+    height:50px; 
+    cursor:pointer; 
+    background-color: yellow; 
+    display:inline-block; 
+    vertical-align: middle;
+    padding-top: 20px;
+}
+
+#choicetwo:hover{
+    width:310px;
+    height:60px;
+    background-color: coral;
+    padding-top:30px;
+}
+
 #explanation{
+    margin: auto;
+    display: inline-block;
+    text-align:center;
+    vertical-align: middle;
+    width: 50%;
     background-color: lawngreen;
 }
