@@ -63,8 +63,8 @@ window.onload = function(){
         leftScore += leftScoreArray[numberOfChoice-1];
         
         questionDisplay.innerHTML = questionArray[numberOfChoice];
-        rightChoice.value = rightArray[numberOfChoice];              
-        leftChoice.value = leftArray[numberOfChoice];
+        rightChoice.innerHTML = rightArray[numberOfChoice];              
+        leftChoice.innerHTML = leftArray[numberOfChoice];
         numberOfChoice++;
                 
         if((TOTAL_NUM_OF_QUESTION + 1) === numberOfChoice){
@@ -82,8 +82,8 @@ window.onload = function(){
         rightScore += rightScoreArray[numberOfChoice-1];
         
         questionDisplay.innerHTML = questionArray[numberOfChoice];
-        leftChoice.value = leftArray[numberOfChoice];
-        rightChoice.value = rightArray[numberOfChoice];
+        leftChoice.innerHTML = leftArray[numberOfChoice];
+        rightChoice.innerHTML = rightArray[numberOfChoice];
         numberOfChoice++;
                 
         if((TOTAL_NUM_OF_QUESTION + 1) === numberOfChoice){

@@ -10,20 +10,8 @@ body{
     color: darkgreen;
 }
 
-input{
-    margin: auto;
-    display: inline-block;
-    vertical-align: middle;
-    width: 25%;
-    height: 50%;
-    border-radius: 4px;
-}
-
-input:focus{
-    border: 0px;
-}
-input:hover{
-    color:coral;  
+div{
+   border-radius: 4px;
 }
 
 #question{
@@ -33,9 +21,7 @@ input:hover{
     vertical-align: middle;
     width: 50%;
     height: 50%;
-    border-radius: 4px;
     background-color: lawngreen;
-    border: darkolivegreen;
 }
 
 #questionSentence{
@@ -46,4 +32,8 @@ input:hover{
     vertical-align: middle;
     padding: 15%;
     width: 70%;
+}
+
+#explanation{
+    background-color: lawngreen;
 }
