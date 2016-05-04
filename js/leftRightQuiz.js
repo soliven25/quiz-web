@@ -72,7 +72,7 @@ window.onload = function(){
         if((TOTAL_NUM_OF_QUESTION + 1) === numberOfChoice){
             displayResult();
         }else{
-            remainDisplay.innerHTML = numberOfChoice + "/19";
+            remainDisplay.innerHTML = numberOfChoice + "/" + TOTAL_NUM_OF_QUESTION;
         }     
     }
     
@@ -81,7 +81,7 @@ window.onload = function(){
         if(numberOfChoice > TOTAL_NUM_OF_QUESTION)
             return;
                     
-        if(1 == rightScoreArray[numberOfChoice-1])
+        if(1 == leftScoreArray[numberOfChoice-1])
             rightScore++;
         else
             leftScore++;
@@ -96,7 +96,7 @@ window.onload = function(){
         if((TOTAL_NUM_OF_QUESTION + 1) === numberOfChoice){
             displayResult();
         }else{
-            remainDisplay.innerHTML = numberOfChoice +"/20";   
+            remainDisplay.innerHTML = numberOfChoice +"/" + TOTAL_NUM_OF_QUESTION;   
         }                                                                                           
     }
             
