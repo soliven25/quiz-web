@@ -62,7 +62,7 @@ window.onload = function(){
         else
             rightScore++;
             
-        console.log(leftScore + "vs" + rightScore);
+        console.log(leftScoreArray[numberOfChoice-1] + ":" +leftScore + " vs " + rightScore);
         
         questionDisplay.innerHTML = questionArray[numberOfChoice];
         rightChoice.innerHTML = rightArray[numberOfChoice];              
@@ -86,7 +86,7 @@ window.onload = function(){
         else
             leftScore++;
             
-        console.log(leftScore + "vs" + rightScore);
+        console.log(rightScoreArray[numberOfChoice-1] + ": "+ leftScore + " vs " + rightScore);
         
         questionDisplay.innerHTML = questionArray[numberOfChoice];
         leftChoice.innerHTML = leftArray[numberOfChoice];
