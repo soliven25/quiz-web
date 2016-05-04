@@ -24,18 +24,18 @@ window.onload = function(){
                          "끝"];
                          
     var leftArray = ["default","가사","예","예","예",
-                    "예","예","다양한 활동","이론","예",
-                    "그림","예","예","예","예",
-                    "계획적","예","예","예","끝"];
+                    "예","다양한 활동","이론","예","전체",
+                    "예","예","예","예","계획적",
+                    "직관","예","예","예","끝"];
                     
     var rightArray = ["default","멜로디", "아니요", "아니요","아니요",
-                     "아니요","아니요", "혼자만의 시간", "이미지","아니요",
-                     "세부사항","아니요", "아니요", "아니요","아니요",
-                     "닥치는데로","아니요", "아니요", "아니요","끝"];
+                     "아니요","혼자만의 시간", "이미지","아니요","세부사항",
+                     "아니요", "아니요", "아니요","아니요","닥치는데로",
+                     "분석", "아니요", "아니요","아니요","끝"];
     /* the answer for left, the case left choice is left brain 1 otherwise 0 */                
     /* assign the weight for each question */
-    var leftScoreArray =  [0,1,0,    1,   1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]; 
-    var rightScoreArray = [1,0,1,    0,   1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    var leftScoreArray =  [0,1,0,1,0,1,0,1,1,0,0,1,1,1,1,0,1,1,1]; 
+    var rightScoreArray = [1,0,1,0,1,0,1,0,0,1,1,0,0,0,0,1,0,0,0];
             
     var questionDisplay = document.getElementById("questionSentence");  /* DOM element for question */
     var leftChoice = document.getElementById("choiceone"); /* DOM element for left */
@@ -57,7 +57,12 @@ window.onload = function(){
         if(numberOfChoice > TOTAL_NUM_OF_QUESTION)
             return;
                       
-        leftScore += leftScoreArray[numberOfChoice-1];
+        if(1 == leftScoreArray[numberOfChoice-1])
+            leftScore++;
+        else
+            rightScore++;
+            
+        console.log(leftScore + "vs" + rightScore);
         
         questionDisplay.innerHTML = questionArray[numberOfChoice];
         rightChoice.innerHTML = rightArray[numberOfChoice];              
@@ -76,7 +81,12 @@ window.onload = function(){
         if(numberOfChoice > TOTAL_NUM_OF_QUESTION)
             return;
                     
-        rightScore += rightScoreArray[numberOfChoice-1];
+        if(1 == rightScoreArray[numberOfChoice-1])
+            rightScore++;
+        else
+            leftScore++;
+            
+        console.log(leftScore + "vs" + rightScore);
         
         questionDisplay.innerHTML = questionArray[numberOfChoice];
         leftChoice.innerHTML = leftArray[numberOfChoice];
