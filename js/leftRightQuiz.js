@@ -46,9 +46,9 @@ window.onload = function(){
     /* display the final result */       
     function displayResult(){
         if(leftScore > rightScore)
-            questionDisplay.innerHTML = "당신은 좌뇌형이네요~~"; 
+            questionDisplay.innerHTML = "당신은 좌뇌형이네요~~" + "<br><br>다시 하시려면 여기를 클릭 해 주세요~"; 
         else
-            questionDisplay.innerHTML = "당신은 우뇌형이네요~~";               
+            questionDisplay.innerHTML = "당신은 우뇌형이네요~~" + "<br><br>다시 하시려면 여기를 클릭 해 주세요~";               
     }
           
     /* the case a user selects left answer */  
@@ -98,6 +98,22 @@ window.onload = function(){
         }else{
             remainDisplay.innerHTML = numberOfChoice +"/" + TOTAL_NUM_OF_QUESTION;   
         }                                                                                           
+    }
+    
+    questionDisplay.onclick = function(){
+        
+        if(numberOfChoice > TOTAL_NUM_OF_QUESTION){
+            /* reset global variable to retest */
+            numberOfChoice = 1;
+            leftScore = 0;
+            rightScore = 0;
+        
+            questionDisplay.innerHTML = "처음 본 사람의 얼굴과 이름 중 잘 기억하는 것은?"
+            leftChoice.innerHTML = "얼굴";
+            rightChoice.innerHTML = "이름";
+            remainDisplay.innerHTML = "1/" + TOTAL_NUM_OF_QUESTION;
+        }
+        
     }
             
 }
