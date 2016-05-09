@@ -34,6 +34,10 @@ div{
     width: 70%;
 }
 
+#questionSentence:hover{
+    cursor:pointer;
+}
+
 #multipleChoice{
     text-align:center; 
     vertical-align: middle;
