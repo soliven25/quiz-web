@@ -33,7 +33,7 @@ div{
     text-align:center;
     vertical-align: middle;
     padding: 10%;
-    width: 18px;
+    font-size: 18px;
 }
 
 #questionSentence:hover{
