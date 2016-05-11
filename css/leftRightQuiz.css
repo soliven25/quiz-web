@@ -16,12 +16,14 @@ div{
 
 #question{
     margin: auto;
-    display: inline-block;
     text-align:center;
     vertical-align: middle;
-    width: 50%;
+    width: auto;
     height: 50%;
-    background-color: lawngreen;
+    background: #fff;
+    border-radius: 10px;
+    border: solid #cccccc 0.5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.4);
 }
 
 #questionSentence{
@@ -30,8 +32,8 @@ div{
     display: inline-block;
     text-align:center;
     vertical-align: middle;
-    padding: 15%;
-    width: 70%;
+    padding: 10%;
+    width: 18px;
 }
 
 #questionSentence:hover{
@@ -39,44 +41,50 @@ div{
 }
 
 #multipleChoice{
+    position: relative;
     text-align:center; 
     vertical-align: middle;
+    margin-top: 30px;
+    font-size: 18px;
+    color: #fff;
 }
 
 #choiceone{
-    width:300px; 
-    height:50px; 
+    width:48%; 
+    height:40px; 
     cursor:pointer; 
-    background-color: red; 
+    background-color: #fa573c; 
     display:inline-block;
     text-align:center; 
     vertical-align: middle;
     padding-top: 20px;
+    border-radius: 10px;
+    position: relative;
+    float: left;
 }
 
 #choiceone:hover{
-    width:310px;
     height:60px;
-    background-color: orange;
+    background-color: #a0281c;
     padding-top:30px;
     transition: width .5s ease;
     transition: height .5s ease;
 }
 
 #choicetwo{
-    width:300px; 
-    height:50px; 
+    width:48%; 
+    height:40px; 
     cursor:pointer; 
-    background-color: yellow; 
+    background-color: #5a91f2; 
     display:inline-block; 
     vertical-align: middle;
     padding-top: 20px;
+    border-radius: 10px;
 }
 
 #choicetwo:hover{
-    width: 310px;
     height: 60px;
-    background-color: coral;
+    background-color:#245a9b;
     padding-top:30px;
     transition: width .5s ease;
     transition: height .5s ease;
@@ -84,9 +92,10 @@ div{
 
 #explanation{
     margin: auto;
-    display: inline-block;
-    text-align:center;
+    text-align: center;
     vertical-align: middle;
-    width: 50%;
-    background-color: lawngreen;
+    width:20%;
+    background-color: grey;
+    border-radius: 10px;
+    color: #fff;
 }
