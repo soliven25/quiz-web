@@ -26,7 +26,7 @@ div{
     box-shadow: 0 5px 10px rgba(0,0,0,0.4);
 }
 
-#questionSentence{
+#question-sentence{
     position: relative;
     margin: auto;
     display: inline-block;
@@ -36,20 +36,21 @@ div{
     font-size: 18px;
 }
 
-#questionSentence:hover{
+#question-sentence:hover{
     cursor:pointer;
 }
 
-#multipleChoice{
+#multiple-choice{
     position: relative;
     text-align:center; 
     vertical-align: middle;
-    margin-top: 30px;
+    margin-top: 10px;
     font-size: 18px;
     color: #fff;
+    height: 100px;
 }
 
-#choiceone{
+#choice-one{
     width:48%; 
     height:40px; 
     cursor:pointer; 
@@ -63,7 +64,7 @@ div{
     float: left;
 }
 
-#choiceone:hover{
+#choice-one:hover{
     height:60px;
     background-color: #a0281c;
     padding-top:30px;
@@ -71,7 +72,7 @@ div{
     transition: height .5s ease;
 }
 
-#choicetwo{
+#choice-two{
     width:48%; 
     height:40px; 
     cursor:pointer; 
@@ -82,7 +83,7 @@ div{
     border-radius: 10px;
 }
 
-#choicetwo:hover{
+#choice-two:hover{
     height: 60px;
     background-color:#245a9b;
     padding-top:30px;

@@ -37,10 +37,10 @@ window.onload = function(){
     var leftScoreArray =  [0,1,0,1,0,1,0,1,1,0,0,1,1,1,1,0,1,1,1]; 
     var rightScoreArray = [1,0,1,0,1,0,1,0,0,1,1,0,0,0,0,1,0,0,0];
             
-    var questionDisplay = document.getElementById("questionSentence");  /* DOM element for question */
-    var leftChoice = document.getElementById("choiceone"); /* DOM element for left */
-    var rightChoice = document.getElementById("choicetwo"); /* DOM element for right */
-    var remainDisplay = document.getElementById("remainChoice"); /* DOM element for remain number of questions */
+    var questionDisplay = document.getElementById("question-sentence");  /* DOM element for question */
+    var leftChoice = document.getElementById("choice-one"); /* DOM element for left */
+    var rightChoice = document.getElementById("choice-two"); /* DOM element for right */
+    var remainDisplay = document.getElementById("remain-choice"); /* DOM element for remain number of questions */
     var resultDisplay = document.getElementById("result"); /* DOM element for the final result */
      
     /* display the final result */       
@@ -50,7 +50,7 @@ window.onload = function(){
         else
             questionDisplay.innerHTML = "당신은 우뇌형이네요~~" + "<br><br>다시 하시려면 여기를 클릭 해 주세요~";               
     }
-          
+
     /* the case a user selects left answer */  
     leftChoice.onclick = function(e){
         e.preventDefault();
