@@ -57,9 +57,9 @@ window.onload = function(){
 
     /**
      *  the case a user selects left answer 
-     *  @name  leftChoice.onclick
+     *  @name leftChoice onclick
      *  @function
-     *  @param {Event} e 
+     *  @param {Event} e onClick event from user selection
      */  
     leftChoice.onclick = function(e){
         e.preventDefault();
@@ -87,7 +87,7 @@ window.onload = function(){
     
     /**  
      * the case a user selects right answer 
-     * @name rightChoice.onclick
+     * @name rightChoice onclick
      * @function
      */                
     rightChoice.onclick = function(){
@@ -114,7 +114,7 @@ window.onload = function(){
     }
    /**  
     * display the question sentence for user.
-    * @name questionDisplay.onclick
+    * @name questionDisplay onclick
     * @function
     */    
     questionDisplay.onclick = function(){
