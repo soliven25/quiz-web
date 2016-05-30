@@ -45,6 +45,8 @@ window.onload = function(){
      
     /**
      *  display the final result 
+     *  @name displayResult
+     *  @function
      */       
     function displayResult(){
         if(leftScore > rightScore)
@@ -55,6 +57,8 @@ window.onload = function(){
 
     /**
      *  the case a user selects left answer 
+     *  @name  leftChoice.onclick
+     *  @function
      *  @param {Event} e 
      */  
     leftChoice.onclick = function(e){
@@ -83,6 +87,8 @@ window.onload = function(){
     
     /**  
      * the case a user selects right answer 
+     * @name rightChoice.onclick
+     * @function
      */                
     rightChoice.onclick = function(){
         if(numberOfChoice > TOTAL_NUM_OF_QUESTION)
@@ -108,6 +114,8 @@ window.onload = function(){
     }
    /**  
     * display the question sentence for user.
+    * @name questionDisplay.onclick
+    * @function
     */    
     questionDisplay.onclick = function(){
         
