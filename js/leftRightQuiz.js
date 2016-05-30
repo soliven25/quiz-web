@@ -43,7 +43,9 @@ window.onload = function(){
     var remainDisplay = document.getElementById("remain-choice"); /* DOM element for remain number of questions */
     var resultDisplay = document.getElementById("result"); /* DOM element for the final result */
      
-    /* display the final result */       
+    /**
+     *  display the final result 
+     */       
     function displayResult(){
         if(leftScore > rightScore)
             questionDisplay.innerHTML = "당신은 좌뇌형이네요~~" + "<br><br>다시 하시려면 여기를 클릭 해 주세요~"; 
@@ -51,7 +53,10 @@ window.onload = function(){
             questionDisplay.innerHTML = "당신은 우뇌형이네요~~" + "<br><br>다시 하시려면 여기를 클릭 해 주세요~";               
     }
 
-    /* the case a user selects left answer */  
+    /**
+     *  the case a user selects left answer 
+     *  @param {Event} e 
+     */  
     leftChoice.onclick = function(e){
         e.preventDefault();
         if(numberOfChoice > TOTAL_NUM_OF_QUESTION)
@@ -76,7 +81,9 @@ window.onload = function(){
         }     
     }
     
-    /* the case a user selects right answer */                
+    /**  
+     * the case a user selects right answer 
+     */                
     rightChoice.onclick = function(){
         if(numberOfChoice > TOTAL_NUM_OF_QUESTION)
             return;
@@ -99,7 +106,9 @@ window.onload = function(){
             remainDisplay.innerHTML = numberOfChoice +"/" + TOTAL_NUM_OF_QUESTION;   
         }                                                                                           
     }
-    
+   /**  
+    * display the question sentence for user.
+    */    
     questionDisplay.onclick = function(){
         
         if(numberOfChoice > TOTAL_NUM_OF_QUESTION){
